@@ -1,0 +1,13 @@
+target/
+
+# intellij idea
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# vs code
+.vscode/
+
+# misc
+.DS_Store
