@@ -15,20 +15,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <!-- Import dependency management from Spring Boot -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.1.8.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
+        <!-- pet-clinic-modules -->
+        <dependency>
+            <groupId>com.github.udavpit.petclinic</groupId>
+            <artifactId>sfg-pet-clinic-data</artifactId>
+        </dependency>
+
+        <!-- spring-boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -41,19 +35,8 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>

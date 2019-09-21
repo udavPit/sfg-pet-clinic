@@ -8,7 +8,7 @@
     <artifactId>sfg-pet-clinic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
     <name>sfg-pet-clinic</name>
     <description>Spring Boot PetClinic application, for learning purposes</description>
 
@@ -23,27 +23,46 @@
         <java.version>11</java.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.1.8.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.udavpit.petclinic</groupId>
+                <artifactId>sfg-pet-clinic-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.ow2.asm</groupId>
-                        <artifactId>asm</artifactId>
-                        <version>6.2</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.ow2.asm</groupId>
+                            <artifactId>asm</artifactId>
+                            <version>6.2</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
         </pluginManagement>
-  </build>
+    </build>
 
 </project>
