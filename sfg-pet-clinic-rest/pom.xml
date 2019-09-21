@@ -4,10 +4,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sfg-pet-clinic-server</artifactId>
+    <artifactId>sfg-pet-clinic-rest</artifactId>
 
-    <name>sfg-pet-clinic-server</name>
-    <description>PetClinic Spring Boot Server</description>
+    <name>sfg-pet-clinic-rest</name>
+    <description>PetClinic Spring Boot REST Server</description>
 
     <parent>
         <groupId>com.github.udavpit.petclinic</groupId>
@@ -42,11 +42,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <dependency>

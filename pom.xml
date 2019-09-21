@@ -13,7 +13,8 @@
     <description>Spring Boot PetClinic application, for learning purposes</description>
 
     <modules>
-        <module>sfg-pet-clinic-server</module>
+        <module>sfg-pet-clinic-data</module>
+        <module>sfg-pet-clinic-rest</module>
         <module>sfg-pet-clinic-ui</module>
     </modules>
 
