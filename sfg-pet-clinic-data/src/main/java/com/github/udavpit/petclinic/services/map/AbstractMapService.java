@@ -3,10 +3,7 @@ package com.github.udavpit.petclinic.services.map;
 import com.github.udavpit.petclinic.models.BaseEntity;
 import com.github.udavpit.petclinic.services.CrudService;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 public abstract class AbstractMapService<T extends BaseEntity> implements CrudService<T, Long> {
 
@@ -14,7 +11,7 @@ public abstract class AbstractMapService<T extends BaseEntity> implements CrudSe
 
     @Override
     public Set<T> findAll() {
-        return Set.copyOf(map.values());
+        return new HashSet<>(map.values());
     }
 
     @Override
